@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Text Adventure</title>
+    <link rel="stylesheet" href="text adventure.css">
+</head>
+<body>
+    <div id="title-screen">
+        <h1 id="game-title">Der Schmetterlingseffekt</h1>
+         <img id="title-background" src="images/schmetterlingseffekt_1.jpg" alt="Title Background">
+        <button id="start-button">Entpuppe dich</button>
+    </div>
+    <div id="character-selection" class="hidden">
+        <h2>Charakterauswahl</h2>
+        <p>Entscheide dich für einen dieser Teenager. Deine Wahl könnte zu kleinen Veränderungen in deiner Story führen</p>
+        <div class="character" onclick="selectCharacter('Chris')">
+            <h3>Chris</h3>
+            <p>mutig, humorvoll, impulsiv</p>
+            <img src="images/chris_ch.jpg" alt="Chris">
+        </div>
+        <div class="character" onclick="selectCharacter('Sam')">
+            <h3>Sam</h3>
+            <p>gewissenhaft, unsichtig, empathisch</p>
+            <img src="images/sam_ch.jpg" alt="Sam">
+        </div>
+        <div class="character" onclick="selectCharacter('Jessica')">
+            <h3>Jessica</h3>
+            <p>furchtlos, unüberlegt, humorvoll</p>
+            <img src="images/jessica_ch.jpg" alt="Jessica">
+        </div>
+    </div>
+    <div id="game-container" class="hidden">
+        <div id="image-container">
+            <img id="story-image" src="" alt="Story Image">
+        </div>
+        <div id="story"></div>
+        <div id="choices"></div>
+    </div>
+    <audio id="background-music" src="audio/dark.mp3" loop></audio>
+    <audio id="click-sound" src="audio/boop.mp3"></audio>
+    <script src="text adventure.js"></script>
+</body>
+</html>
